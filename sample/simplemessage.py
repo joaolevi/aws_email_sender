@@ -1,7 +1,10 @@
-import boto3
+from boto3 import resource
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Get the service resource
-sqs = boto3.resource('sqs')
+sqs = resource('sqs')
 
 queue = sqs.create_queue(QueueName='test', Attributes={'DelaySeconds':'5'})
 

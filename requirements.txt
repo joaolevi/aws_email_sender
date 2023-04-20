@@ -1,2 +1,3 @@
 pyinstaller
 boto3
+python-dotenv
